@@ -1,0 +1,20 @@
+package day13.collection.list;
+
+import java.util.Stack;
+
+public class StackEx {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * Stack
+		 * => 후입선출
+		 * => push() , pop()
+		 */
+		
+		
+		Stack<String> stack = new Stack<>();
+		stack.push("ss");
+	}
+
+}

@@ -1,0 +1,17 @@
+package coding;
+
+import java.util.*;
+import java.util.stream.Stream;
+
+class Solution {
+    public int solution(int n) {
+        if ( n <= 7 ) {
+            return 1;
+        } if ( n-1 / 7  != 0 ){
+            return n-1/7+1;
+        } else {
+            return n-1/7;
+        }
+      
+    }
+}

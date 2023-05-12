@@ -1,0 +1,23 @@
+package day13.generic.bad;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ABC abc = new ABC();
+		
+		abc.setObj("홍길동");
+		String name = (String) abc.getObj();
+		System.out.println(name);
+		
+		
+		ABC abc2 = new ABC();
+		abc2.setObj(new Person());
+
+		abc2.getObj();
+		
+		
+		
+	}
+
+}

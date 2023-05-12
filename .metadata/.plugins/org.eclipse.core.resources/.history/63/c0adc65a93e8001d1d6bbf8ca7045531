@@ -1,0 +1,23 @@
+package quiz18;
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class TokenQuiz {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		StringTokenizer st = new StringTokenizer(sc.nextLine(), " ");
+		
+		System.out.println(st.countTokens());
+		
+		while ( st.hasMoreTokens() ) {
+			int i = 1;
+			System.out.println(i + st.nextToken());
+			i++;
+		}
+
+	}
+
+}

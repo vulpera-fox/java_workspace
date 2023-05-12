@@ -1,0 +1,44 @@
+package coding;
+
+import java.util.*;
+import java.util.stream.Stream;
+
+class Solution {
+	public int solution(int[] array) {
+		int answer = 0;
+		int tempAnswer = 0;
+		int bin = array[0];
+		int count = 0;
+
+		if ( array.length == 1 ) {
+			return array[0];
+
+		} else if ( array.length > 2) {
+			for ( int i = 0; i < array.length-1; i++ ) {
+				if ( array[i] == array[i+1] ) {
+					answer++;
+				} else {
+					tempAnswer++;
+					if ( tempAnswer == answer ) {
+						answer = tempAnswer;
+						bin = array[i];
+						answer = 0;
+						count++;
+					} else if ( tempAnswer > answer ) {
+						tempAnswer = 0;
+						count++;
+						bin = array[i];
+					}
+				}
+			}
+		}
+		if ( count >= 1 ) {
+			return -1;
+		} else {
+			return bin;
+		}
+
+
+
+	}
+}

@@ -1,0 +1,12 @@
+package coding;
+
+import java.util.Arrays;
+
+
+class Solution {
+    public String solution(String my_string, int num1, int num2) {
+        String answer = my_string;
+        my_string.replace(my_string.charAt(num1), my_string.charAt(num2));
+        return my_string;
+    }
+}

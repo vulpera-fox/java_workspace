@@ -1,0 +1,24 @@
+package day13.collection.set;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class HashSetEx {
+
+	public static void main(String[] args) {
+		
+		Set<String> set = new HashSet<>();
+		
+		// add()
+		set.add("java");
+		set.add("database");
+		set.add("spring");
+		set.add("jsp");
+		set.add("python");
+		set.add("java");
+		
+		// toString
+		System.out.println(set.toString());
+	}
+
+}

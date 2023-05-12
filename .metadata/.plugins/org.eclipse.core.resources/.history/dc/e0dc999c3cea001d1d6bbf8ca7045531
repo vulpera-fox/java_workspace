@@ -1,0 +1,10 @@
+package day15.api.io.readwrite;
+
+public class WriterEx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;User.java&apos; to &apos;JavaAPI/src/day13.collection.queue&apos;&#x0A;- Original project: &apos;quiz&apos;&#x0A;- Destination element: &apos;JavaAPI/src/day13.collection.queue&apos;&#x0A;- Original element: &apos;quiz19.User.java&apos;" description="Copy compilation unit" destination="=JavaAPI/src&lt;day13.collection.queue" element1="/src&lt;quiz19{User.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1683083937337" units="1" version="1.0"/>
+</session>

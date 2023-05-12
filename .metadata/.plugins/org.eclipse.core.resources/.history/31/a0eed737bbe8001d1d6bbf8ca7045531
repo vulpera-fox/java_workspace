@@ -1,0 +1,31 @@
+package day13.collection.list;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class LinkedListEx {
+
+	public static void main(String[] args) {
+
+		/*
+		 * LinkedList
+		 * 순서 O, 중복 O
+		 * 노드객체 ( 양방향 연결리스트 )
+		 */
+
+
+		List<Integer> list = new LinkedList<>();
+		
+		// list와 기능이 동일하다
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		
+		list.toString();
+		
+		
+	}
+
+}

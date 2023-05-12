@@ -1,0 +1,16 @@
+package day13.api.util.date;
+
+import java.util.Date;
+
+public class DateEx {
+	
+	public static void main(String[] args) {
+		
+		Date date = new Date();
+		System.out.println(date);
+		
+		date.after(date);
+		
+	}
+
+}

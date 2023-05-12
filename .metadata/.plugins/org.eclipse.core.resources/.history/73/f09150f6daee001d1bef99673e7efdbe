@@ -1,0 +1,29 @@
+package coding;
+
+import java.util.*;
+
+class Solution {
+	public int[] solution(int numer1, int denom1, int numer2, int denom2) {
+		int[] answer = new int[2];
+		int denom3 = 0;
+		int numer3 = 0;
+
+		denom3 = denom1 * denom2;
+		numer1 *= denom2;
+		numer2 *= denom1;
+		numer3 = numer1 + numer2;
+
+		while (true) {
+			if ( denom3 % 2 == 0 && numer3 % 2 == 0 && denom3 != 2 || numer3 != 2) {
+				denom3 /= 2;
+				numer3 /= 2;
+				continue;
+			}
+			break;
+		}
+		answer[0] = numer3;
+		answer[1] = denom3;
+
+		return answer;
+	}
+}

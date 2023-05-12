@@ -1,0 +1,72 @@
+package quiz23;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class RegexQuiz03 {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * 1. 버퍼리더를 사용해서 건담.txt를 읽는다
+		 * 2. 정규표현식을 이용해서 날짜, 지점, 등급, 내용, 가격을 패턴분석해 Product객체에 저장하고 그걸 list에 저장
+		 * 3. 외부 라이브러리 (POI) - 자바에서 엑셀파일 xlsx 형식으로 파일을 쓸 수 있도록 하는 기능
+		 * 4. 한개의 시트에 각 행마다 데이터를 넣어서 출력
+		 */
+		
+		String path = "/Users/uwu/file/건담.txt";
+		
+		String p1 = "[0-9]{8}";
+		String p2 = "[가-힣]+점";
+		String p3 = "\\[[A-Z가-힣]+\\]";
+		String p4 = "[0-9,]+원";
+		
+		String pp = "[0-9]+-[0-9]+-[0-9]+";
+		String ppp = "건담?[가-힣]+\s[가-힣]+";
+		String pppp = "\s+";
+		
+		
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(path));){
+			String s;
+			while ( (s = br.readLine()) != null) {
+					
+				Matcher m1 = Pattern.compile(pp).matcher(s);
+				Matcher m2 = Pattern.compile(ppp).matcher(s);
+				Matcher m3 = Pattern.compile(p2).matcher(s);
+				Matcher m4 = Pattern.compile(p3).matcher(s);
+				Matcher m5 = Pattern.compile(p4).matcher(s);
+				Matcher m6 = Pattern.compile(pppp).matcher(s);
+				Matcher m7 = Pattern.compile(p1).matcher(s);
+				
+				
+				if ( m1.find() && m2.find() && m3.find() && m4.find() && m5.find() && m6.find() && m7.find() ) {
+					String p5 = s.replace(m1.group(), "").replaceFirst(m2.group(), "").replace(m3.group(), "").replace(m4.group(), "").replace(m5.group(), "");
+					
+					System.out.println(m7.group());
+					System.out.println(m2.group());
+					System.out.println(m4.group());
+					System.out.println(p5.replaceFirst(m6.group(), ""));
+					System.out.println(m5.group());
+					
+				
+				
+				}
+				
+				
+					}
+				
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}
