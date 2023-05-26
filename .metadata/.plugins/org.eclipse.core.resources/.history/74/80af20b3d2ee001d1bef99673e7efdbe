@@ -1,4 +1,0 @@
-module quiz {
-	requires org.apache.poi.ooxml;
-	requires java.smartcardio;
-}
